@@ -1,0 +1,1470 @@
+<div>
+    <button name="act_stats" type="action" >
+      Stats
+    </button>
+    <button name="act_history" type="action" >
+      Character History
+    </button>
+    <button class="switcher" name="act_vehicle" type="action" >
+      Vehicle
+    </button>
+    <button class="switcher" name="act_secondary_vehicle" type="action" >
+      Secondary Vehicle
+    </button>
+    <button class="switcher" name="act_kaiju" type="action" >
+      Kaiju
+    </button>
+</div>
+
+<input class="sheet-tabstoggle" name="attr_sheetTab" type="hidden" value="stats" />
+
+<div class="stats">
+
+  <div class="name" >
+    <h1>Name:</h1>
+  </div>
+  <div class="name_query" >
+      <input class="name" name="attr_character_name" spellcheck="false" type="text" />
+  </div>
+
+  <div class="plotpoints" >
+    <h2>Plot Points</h2>
+  </div>
+  <div class="ppcounter" >
+      <input name="attr_pp" min="0" placeholder="0" type="number" />
+  </div>
+
+  <div class="dicepool" >
+    <h2>Dice Pool</h2>
+  </div>
+
+    <div class="d4roll" >
+      <button name="d4roll" type="roll" value="/roll d4" >
+        D4
+      </button>
+        <input name="attr_d4pool" min="0" placeholder="0" type="number" />
+    </div>
+    <div class="d6roll" >
+      <button name="d6roll" type="roll" value="/roll d6" >
+        D6
+      </button>
+        <input name="attr_d6pool" min="0" placeholder="0" type="number" />
+    </div>
+    <div class="d8roll" >
+      <button name="d8roll" type="roll" value="/roll d8" >
+        D8
+      </button>
+        <input name="attr_d8pool" min="0" placeholder="0" type="number" />
+    </div>
+    <div class="d10roll" >
+      <button name="d10roll" type="roll" value="/roll d10" >
+        D10
+      </button>
+        <input name="attr_d10pool" min="0" placeholder="0" type="number" />
+    </div>
+    <div class="d12roll" >
+      <button name="d12roll" type="roll" value="/roll d12" >
+        D12
+      </button>
+        <input name="attr_d12pool" min="0" placeholder="0" type="number" />
+    </div>
+
+    <div class="poolbuttons" >
+      <button name="rollpool" type="roll" value="/roll {[[0 + @{d4pool}]]d4 + [[0 + @{d6pool}]]d6 + [[0 + @{d8pool}]]d8 + [[0 + @{d10pool}]]d10 + [[0 + @{d12pool}]]d12}k2" >
+        Roll Pool
+      </button>
+      <button name="act_clearpool" type="action" >
+        Clear Pool
+      </button>
+    </div>
+
+    <div class="attributes" >
+      <h2>Attributes</h2>
+    </div>
+
+      <div class="brains">
+        <strong>Brains</strong>
+          <select class="small" name="attr_brains" >
+            <option value="d6">D6</option>
+            <option value="d8">D8</option>
+            <option value="d10">D10</option>
+          </select>
+        <textarea class="short" name="attr_brains_statement" spellcheck="false" type="text" >Attribute Statement</textarea>
+      </div>
+
+      <div class="brawn">
+        <strong>Brawn</strong>
+          <select class="small" name="attr_brawn" >
+            <option value="d6">D6</option>
+            <option value="d8">D8</option>
+            <option value="d10">D10</option>
+          </select>
+        <textarea class="short" name="attr_brawn_statement" spellcheck="false" type="text" >Attribute Statement</textarea>
+      </div>
+
+      <div class="bonhomie">
+        <strong>Bonhomie</strong>
+          <select class="small" name="attr_bonhomie" >
+            <option value="d6">D6</option>
+            <option value="d8">D8</option>
+            <option value="d10">D10</option>
+          </select>
+        <textarea class="short" name="attr_bonhomie_statement" spellcheck="false" type="text" >Attribute Statement</textarea>
+      </div>
+
+      <div class="herodice" >
+        <h2>Hero Dice</h2>
+      </div>
+
+        <div class="d4hero" >
+          <button name="d4roll" type="roll" value="/roll d4" >
+            D4
+          </button>
+          <input name="attr_d4hero" min="0" placeholder="0" type="number" />
+        </div>
+        <div class="d6hero" >
+          <button name="d6roll" type="roll" value="/roll d6" >
+            D6
+          </button>
+          <input name="attr_d6hero" min="0" placeholder="0" type="number" />
+        </div>
+        <div class="d8hero" >
+          <button name="d8roll" type="roll" value="/roll d8" >
+            D8
+          </button>
+          <input name="attr_d8hero" min="0" placeholder="0" type="number" />
+        </div>
+        <div class="d10hero" >
+          <button name="d10roll" type="roll" value="/roll d10" >
+            D10
+          </button>
+          <input name="attr_d10hero" min="0" placeholder="0" type="number" />
+        </div>
+        <div class="d12hero" >
+          <button name="d12roll" type="roll" value="/roll d12" >
+            D12
+          </button>
+          <input name="attr_d12hero" min="0" placeholder="0" type="number" />
+        </div>
+
+      <div class="d6attributes">
+        <button name="act_d6add" type="action" >
+          Add D6
+        </button>
+      </div>
+
+      <div class="d8attributes">
+        <button name="act_d8add" type="action" >
+          Add D8
+        </button>
+      </div>
+
+      <div class="d10attributes">
+        <button name="act_d10add" type="action" >
+          Add D10
+        </button>
+      </div>
+
+  <div class="roles" >
+    <h2>Roles</h2>
+  </div>
+    <div class="commander">
+      <strong>Commander</strong>
+        <select class="small" name="attr_commander" >
+          <option value="d4">D4</option>
+          <option value="d6">D6</option>
+          <option value="d8">D8</option>
+          <option value="d10">D10</option>
+      </select>
+    </div>
+
+    <div class="climber">
+      <strong>Climber</strong>
+        <select class="small" name="attr_climber" >
+          <option value="d4">D4</option>
+          <option value="d6">D6</option>
+          <option value="d8">D8</option>
+          <option value="d10">D10</option>
+        </select>
+    </div>
+
+    <div class="engineer">
+      <strong>Engineer</strong>
+        <select class="small" name="attr_engineer" >
+          <option value="d4">D4</option>
+          <option value="d6">D6</option>
+          <option value="d8">D8</option>
+          <option value="d10">D10</option>
+        </select>
+    </div>
+
+    <div class="medic">
+      <strong>Medic</strong>
+        <select class="small" name="attr_medic" >
+          <option value="d4">D4</option>
+          <option value="d6">D6</option>
+          <option value="d8">D8</option>
+          <option value="d10">D10</option>
+        </select>
+    </div>
+
+    <div class="scout">
+      <strong>Scout</strong>
+        <select class="small" name="attr_scout" >
+          <option value="d4">D4</option>
+          <option value="d6">D6</option>
+          <option value="d8">D8</option>
+          <option value="d10">D10</option>
+        </select>
+    </div>
+
+    <div class="rolesfx">
+      <fieldset class="repeating_rolesfx">
+        <input class="sub_name" name="attr_rolesfx_name" placeholder="SFX Name" spellcheck="false" type="text" />
+        <textarea class="short" name="attr_rolesfx_desc" spellcheck="false" type="text" >SFX Description</textarea>
+      </fieldset>
+    </div>
+
+    <div class="roledice">
+      <button name="act_d4add" type="action" >
+        Add D4
+      </button>
+      <button name="act_d6add" type="action" >
+        Add D6
+      </button>
+      <button name="act_d8add" type="action" >
+        Add D8
+      </button>
+      <button name="act_d10add" type="action" >
+        Add D10
+      </button>
+    </div>
+
+
+  <div class="stress">
+    <h2>Stress</h2>
+  </div>
+
+    <div class="angrystress">
+      <strong>Angry</strong>
+        <select class="small" name="attr_angrystress" >
+          <option value="0">0</option>
+          <option value="d4">D4</option>
+          <option value="d6">D6</option>
+          <option value="d8">D8</option>
+          <option value="d10">D10</option>
+          <option value="d12">D12</option>
+          <option value="Out">Out</option>
+        </select>
+    </div>
+
+    <div class="afraidstress">
+      <strong>Afraid</strong>
+        <select class="small" name="attr_afraidstress" >
+          <option value="0">0</option>
+          <option value="d4">D4</option>
+          <option value="d6">D6</option>
+          <option value="d8">D8</option>
+          <option value="d10">D10</option>
+          <option value="d12">D12</option>
+          <option value="Out">Out</option>
+        </select>
+    </div>
+
+    <div class="exhaustedstress">
+      <strong>Exhausted</strong>
+        <select class="small" name="attr_exhaustedstress" >
+          <option value="0">0</option>
+          <option value="d4">D4</option>
+          <option value="d6">D6</option>
+          <option value="d8">D8</option>
+          <option value="d10">D10</option>
+          <option value="d12">D12</option>
+          <option value="Out">Out</option>
+        </select>
+    </div>
+
+    <div class="injuredstress">
+      <strong>Injured</strong>
+        <select class="small" name="attr_injuredstress" >
+          <option value="0">0</option>
+          <option value="d4">D4</option>
+          <option value="d6">D6</option>
+          <option value="d8">D8</option>
+          <option value="d10">D10</option>
+          <option value="d12">D12</option>
+          <option value="Out">Out</option>
+        </select>
+    </div>
+
+    <div class="insecurestress">
+      <strong>Insecure</strong>
+        <select class="small" name="attr_insecurestress" >
+          <option value="0">0</option>
+          <option value="d4">D4</option>
+          <option value="d6">D6</option>
+          <option value="d8">D8</option>
+          <option value="d10">D10</option>
+          <option value="d12">D12</option>
+          <option value="Out">Out</option>
+        </select>
+    </div>
+
+    <div class="skills">
+      <h2>Skills</h2>
+    </div>
+
+      <div class="skillrating">
+        <fieldset class="repeating_skills1">
+
+          <select class="small" name="attr_skill1">
+            <option>Choose...</option>
+            <option>Build</option>
+            <option>Fight</option>
+            <option>Fix</option>
+            <option>Focus</option>
+            <option>Influence</option>
+            <option>Know</option>
+            <option>Move</option>
+            <option>Notice</option>
+            <option>Operate</option>
+            <option>Pilot</option>
+            <option>Shoot</option>
+            <option>Sneak</option>
+            <option>Survive</option>
+            <option>Treat</option>
+            <option>Trick</option>
+          </select>
+
+          <select class="small" name="attr_rating1">
+            <option value="d4">D4</option>
+            <option value="d6">D6</option>
+            <option value="d8">D8</option>
+            <option value="d10">D10</option>
+          </select>
+
+          <input class="sub_name" name="attr_spec1" placeholder="Specialties" spellcheck="false" type="text" />
+        </fieldset>
+      </div>
+
+      <div class="skilldice">
+        <button name="act_d4add" type="action" >
+          Add D4
+        </button>
+        <button name="act_d6add" type="action" >
+          Add D6
+        </button>
+        <button name="act_d8add" type="action" >
+          Add D8
+        </button>
+        <button name="act_d10add" type="action" >
+          Add D10
+        </button>
+      </div>
+
+      <div class="relationships">
+        <h2>Relationships</h2>
+      </div>
+
+        <div class="relationship_name_state">
+          <fieldset class="repeating_relationships">
+            <input class="sub_name" name="attr_rel_name" placeholder="Relationship" spellcheck="false" type="text" />
+            <select class="small" name="attr_rel_rating" >
+              <option value="d6">D6</option>
+              <option value="d8">D8</option>
+              <option value="d10">D10</option>
+            </select>
+            <input class="description" name="attr_rel_state" placeholder="Relationship Statement" spellcheck="false" type="text" />
+          </fieldset>
+        </div>
+
+    <div class="signatureassets">
+      <h2>Signature Assets</h2>
+    </div>
+
+      <div class="asset_names_descs">
+        <fieldset class="repeating_asset">
+          <input class="sub_name" name="attr_asset_name" placeholder="Asset" spellcheck="false" type="text" />
+          <select class="small" name="attr_asset_rating" >
+            <option value="d6">D6</option>
+            <option value="d8">D8</option>
+            <option value="d10">D10</option>
+          </select>
+          <input class="description" name="attr_asset_desc" placeholder="Asset Description or SFX" spellcheck="false" type="text" />
+        </fieldset>
+      </div>
+
+      <div class="assetbuttons">
+        <button name="act_createasset" type="action" >
+          Create Asset: -1PP
+        </button>
+        <button name="act_d6add" type="action" >
+          Add D6
+        </button>
+        <button name="act_d8add" type="action" >
+          Add D8
+        </button>
+      </div>
+
+      <div class="push">
+        <h2>Push Dice</h2>
+      </div>
+
+        <div class="pushdice">
+          <button name="act_push" type="action" >
+            Push: Add D6, -1PP
+          </button>
+          <button name="act_opppush" type="action" >
+            Opportunity Push: Add D8, -1PP
+          </button>
+        </div>
+
+        <div class="poolbuttons_b" >
+         <button name="rollpool" type="roll" value="/roll {[[0 + @{d4pool}]]d4 + [[0 + @{d6pool}]]d6 + [[0 + @{d8pool}]]d8 + [[0 + @{d10pool}]]d10 + [[0 + @{d12pool}]]d12}k2" >
+           Roll Pool
+         </button>
+         <button name="act_clearpool" type="action" >
+           Clear Pool
+         </button>
+        </div>
+
+         <div class="d4roll_b" >
+             <strong>D4:</strong>
+             <input name="attr_d4pool" min="0" placeholder="0" type="number" />
+         </div>
+         <div class="d6roll_b" >
+             <strong>D6:</strong>
+             <input name="attr_d6pool" min="0" placeholder="0" type="number" />
+         </div>
+         <div class="d8roll_b" >
+             <strong>D8:</strong>
+             <input name="attr_d8pool" min="0" placeholder="0" type="number" />
+         </div>
+         <div class="d10roll_b" >
+             <strong>D10:</strong>
+             <input name="attr_d10pool" min="0" placeholder="0" type="number" />
+         </div>
+         <div class="d12roll_b" >
+             <strong>D12:</strong>
+             <input name="attr_d12pool" min="0" placeholder="0" type="number" />
+         </div>
+
+</div>
+
+<div class="history" >
+
+  <div class="name_again" >
+    <h1>Name:</h1>
+  </div>
+  <div class="name_query_again" >
+      <input class="name" name="attr_character_name" spellcheck="false" type="text" />
+  </div>
+
+  <div class="age" >
+    <h2>Age</h2>
+  </div>
+
+  <div class="age_query" >
+    <input class="small" name="attr_age" placeholder="Age" spellcheck="false" type="text" />
+  </div>
+
+  <div class="gender" >
+    <h2>Gender</h2>
+  </div>
+
+  <div class="gender_query" >
+    <input class="sub_name" name="attr_gender" placeholder="Gender" spellcheck="false" type="text" />
+  </div>
+
+  <div class="birthplace" >
+    <h2>Birthplace</h2>
+  </div>
+
+  <div class="birthplace_query" >
+    <input class="sub_name" name="attr_birthplace" placeholder="Birthplace" spellcheck="false" type="text" />
+  </div>
+
+  <div class="sessionrecords" >
+    <h2>Session Records</h2>
+  </div>
+
+  <div class="records" >
+    <fieldset class="repeating_session_records">
+      <input class="description" name="attr_session_name" placeholder="Session Name and Details" spellcheck="false" type="text" />
+        <select class="small" name="attr_sessionuse" >
+          <option value="Unused">Unused</option>
+          <option value="Used">Used</option>
+        </select>
+        <strong>In Session</strong>
+
+        <select class="small" name="attr_traininguse" >
+          <option value="Unused">Unused</option>
+          <option value="Used">Used</option>
+        </select>
+        <strong>For Training</strong>
+    </fieldset>
+  </div>
+
+  <div class="bio">
+    <h2>Bio</h2>
+    <textarea class="tall_n_wide" name="attr_bio" spellcheck="false"></textarea>
+  </div>
+
+  <div class="growthpool" >
+    <h2>Growth Pool</h2>
+  </div>
+
+    <div class="growthd4" >
+      <strong>D4</strong>
+        <input name="attr_d4growthpool" min="0" placeholder="0" type="number" />
+    </div>
+    <div class="growthd6" >
+      <strong>D6</strong>
+        <input name="attr_d6growthpool" min="0" placeholder="0" type="number" />
+    </div>
+    <div class="growthd8" >
+      <strong>D8</strong>
+        <input name="attr_d8growthpool" min="0" placeholder="0" type="number" />
+    </div>
+    <div class="growthd10" >
+      <strong>D10</strong>
+        <input name="attr_d10growthpool" min="0" placeholder="0" type="number" />
+    </div>
+    <div class="growthd12" >
+      <strong>D12</strong>
+        <input name="attr_d12growthpool" min="0" placeholder="0" type="number" />
+    </div>
+
+    <div class="rollgrowthpool" >
+      <button name="rollpool" type="roll" value="/roll {[[0 + @{d4growthpool}]]d4 + [[0 + @{d6growthpool}]]d6 + [[0 + @{d8growthpool}]]d8 + [[0 + @{d10growthpool}]]d10 + [[0 + @{d12growthpool}]]d12}k2" >
+        Roll Pool
+      </button>
+    </div>
+</div>
+
+<div class="vehicle" >
+  <div class="vehiclename" >
+    <h1>Name</h1>
+  </div>
+  <div class="vehiclenamequery" >
+    <input class="name" name="attr_vehicle_name" spellcheck="false" type="text" />
+  </div>
+
+  <div class="vehiclescale" >
+    <h1>Scale</h1>
+  </div>
+  <div class="vehiclescaleselect" >
+    <select class="long" name="attr_vehicle_scale" >
+      <option value="Big">Big - D6</option>
+      <option value="Huge">Huge - D8</option>
+      <option value="Colossal">Colossal - D10</option>
+      <option value="Gargantuan">Gargantuan - D12</option>
+    </select>
+  </div>
+
+  <div class="dicepoolvehicle" >
+    <h2>Dice Pool</h2>
+  </div>
+
+    <div class="d4rollvehicle" >
+      <button name="d4roll" type="roll" value="/roll d4" >
+        D4
+      </button>
+        <input name="attr_d4pool" min="0" placeholder="0" type="number" />
+    </div>
+    <div class="d6rollvehicle" >
+      <button name="d6roll" type="roll" value="/roll d6" >
+        D6
+      </button>
+        <input name="attr_d6pool" min="0" placeholder="0" type="number" />
+    </div>
+    <div class="d8rollvehicle" >
+      <button name="d8roll" type="roll" value="/roll d8" >
+        D8
+      </button>
+        <input name="attr_d8pool" min="0" placeholder="0" type="number" />
+    </div>
+    <div class="d10rollvehicle" >
+      <button name="d10roll" type="roll" value="/roll d10" >
+        D10
+      </button>
+        <input name="attr_d10pool" min="0" placeholder="0" type="number" />
+    </div>
+    <div class="d12rollvehicle" >
+      <button name="d12roll" type="roll" value="/roll d12" >
+        D12
+      </button>
+        <input name="attr_d12pool" min="0" placeholder="0" type="number" />
+    </div>
+
+    <div class="poolbuttonsvehicle" >
+      <button name="rollpool" type="roll" value="/roll {[[0 + @{d4pool}]]d4 + [[0 + @{d6pool}]]d6 + [[0 + @{d8pool}]]d8 + [[0 + @{d10pool}]]d10 + [[0 + @{d12pool}]]d12}k2" >
+        Roll Pool
+      </button>
+      <button name="act_clearpool" type="action" >
+        Clear Pool
+      </button>
+    </div>
+
+    <div class="distinctionsvehicle" >
+      <h2>Distinctions</h2>
+    </div>
+
+      <div class="dis1vehicle" >
+        <input class="description" name="attr_dis1" spellcheck="false" type="text" />
+      </div>
+      <div class="dis1vehiclesfx">
+        <fieldset class="repeating_dis1sfx">
+          <input class="sub_name" name="attr_dis1sfx_name" placeholder="SFX Name" spellcheck="false" type="text" />
+          <textarea class="short" name="attr_dis1sfx_desc" spellcheck="false" type="text" >SFX Description</textarea>
+        </fieldset>
+      </div>
+
+      <div class="dis2vehicle" >
+        <input class="description" name="attr_dis2" spellcheck="false" type="text" />
+      </div>
+      <div class="dis2vehiclesfx">
+        <fieldset class="repeating_dis2sfx">
+          <input class="sub_name" name="attr_dis2sfx_name" placeholder="SFX Name" spellcheck="false" type="text" />
+          <textarea class="short" name="attr_dis2sfx_desc" spellcheck="false" type="text" >SFX Description</textarea>
+        </fieldset>
+      </div>
+
+      <div class="dis3vehicle" >
+        <input class="description" name="attr_dis3" spellcheck="false" type="text" />
+      </div>
+      <div class="dis3vehiclesfx">
+        <fieldset class="repeating_dis3sfx">
+          <input class="sub_name" name="attr_dis3sfx_name" placeholder="SFX Name" spellcheck="false" type="text" />
+          <textarea class="short" name="attr_dis3sfx_desc" spellcheck="false" type="text" >SFX Description</textarea>
+        </fieldset>
+      </div>
+
+      <div class="distinctiondicevehicle">
+        <button name="act_d4distinction" type="action" >
+          Add D4, +1PP
+        </button>
+        <button name="act_d8add" type="action" >
+          Add D8
+        </button>
+      </div>
+
+    <div class="attributesvehicle" >
+      <h2>Attributes</h2>
+    </div>
+
+      <div class="engines">
+        <strong>Engines</strong>
+          <select class="small" name="attr_engines" >
+            <option value="d6">D6</option>
+            <option value="d8">D8</option>
+            <option value="d10">D10</option>
+          </select>
+      </div>
+
+      <div class="frames">
+        <strong>Frames</strong>
+          <select class="small" name="attr_frames" >
+            <option value="d6">D6</option>
+            <option value="d8">D8</option>
+            <option value="d10">D10</option>
+          </select>
+      </div>
+
+      <div class="systems">
+        <strong>Systems</strong>
+          <select class="small" name="attr_systems" >
+            <option value="d6">D6</option>
+            <option value="d8">D8</option>
+            <option value="d10">D10</option>
+          </select>
+      </div>
+
+    <div class="stressvehicle">
+      <h2>Stress</h2>
+    </div>
+
+      <div class="enginesstress">
+        <select class="small" name="attr_enginesstress" >
+          <option value="0">0</option>
+          <option value="d4">D4</option>
+          <option value="d6">D6</option>
+          <option value="d8">D8</option>
+          <option value="d10">D10</option>
+          <option value="d12">D12</option>
+          <option value="Out">Out</option>
+        </select>
+      </div>
+
+      <div class="framesstress">
+        <select class="small" name="attr_afraidstress" >
+          <option value="0">0</option>
+          <option value="d4">D4</option>
+          <option value="d6">D6</option>
+          <option value="d8">D8</option>
+          <option value="d10">D10</option>
+          <option value="d12">D12</option>
+          <option value="Out">Out</option>
+        </select>
+      </div>
+
+      <div class="systemsstress">
+        <select class="small" name="attr_systemsstress" >
+          <option value="0">0</option>
+          <option value="d4">D4</option>
+          <option value="d6">D6</option>
+          <option value="d8">D8</option>
+          <option value="d10">D10</option>
+          <option value="d12">D12</option>
+          <option value="Out">Out</option>
+        </select>
+      </div>
+
+    <div class="traumavehicle">
+      <h2>Trauma</h2>
+    </div>
+
+      <div class="enginestrauma">
+        <select class="small" name="attr_enginestrauma" >
+          <option value="0">0</option>
+          <option value="d4">D4</option>
+          <option value="d6">D6</option>
+          <option value="d8">D8</option>
+          <option value="d10">D10</option>
+          <option value="d12">D12</option>
+          <option value="Out">Destroyed</option>
+        </select>
+      </div>
+
+      <div class="framestrauma">
+        <select class="small" name="attr_framestrauma" >
+          <option value="0">0</option>
+          <option value="d4">D4</option>
+          <option value="d6">D6</option>
+          <option value="d8">D8</option>
+          <option value="d10">D10</option>
+          <option value="d12">D12</option>
+          <option value="Out">Destroyed</option>
+        </select>
+      </div>
+
+      <div class="systemstrauma">
+        <select class="small" name="attr_systemstrauma" >
+          <option value="0">0</option>
+          <option value="d4">D4</option>
+          <option value="d6">D6</option>
+          <option value="d8">D8</option>
+          <option value="d10">D10</option>
+          <option value="d12">D12</option>
+          <option value="Out">Destroyed</option>
+        </select>
+      </div>
+
+      <div class="attributesbuttonsvehicle">
+        <button name="act_d4add" type="action" >
+          Add D4
+        </button>
+        <button name="act_d6add" type="action" >
+          Add D6
+        </button>
+        <button name="act_d8add" type="action" >
+          Add D8
+        </button>
+        <button name="act_d10add" type="action" >
+          Add D10
+        </button>
+      </div>
+
+  <div class="signatureassetsvehicle">
+    <h2>Signature Assets</h2>
+  </div>
+
+    <div class="asset_names_descsvehicle">
+      <fieldset class="repeating_assetvehicle">
+        <input class="sub_name" name="attr_vehicleasset_name" placeholder="Asset" spellcheck="false" type="text" />
+        <select class="small" name="attr_vehicleasset_rating" >
+          <option value="d6">D6</option>
+          <option value="d8">D8</option>
+          <option value="d10">D10</option>
+        </select>
+        <input class="description" name="attr_vehicleasset_desc" placeholder="Asset Description or SFX" spellcheck="false" type="text" />
+      </fieldset>
+    </div>
+</div>
+
+<div class="secondary_vehicle" >
+  <div class="vehiclename2" >
+    <h1>Name</h1>
+  </div>
+  <div class="vehiclenamequery2" >
+    <input class="name" name="attr_vehicle_name2" spellcheck="false" type="text" />
+  </div>
+
+  <div class="vehiclescale2" >
+    <h1>Scale</h1>
+  </div>
+  <div class="vehiclescaleselect2" >
+    <select class="long" name="attr_vehicle_scale2" >
+      <option value="Big">Big - D6</option>
+      <option value="Huge">Huge - D8</option>
+      <option value="Colossal">Colossal - D10</option>
+      <option value="Gargantuan">Gargantuan - D12</option>
+    </select>
+  </div>
+
+  <div class="dicepoolvehicle2" >
+    <h2>Dice Pool</h2>
+  </div>
+
+    <div class="d4rollvehicle2" >
+      <button name="d4roll" type="roll" value="/roll d4" >
+        D4
+      </button>
+        <input name="attr_d4pool" min="0" placeholder="0" type="number" />
+    </div>
+    <div class="d6rollvehicle2" >
+      <button name="d6roll" type="roll" value="/roll d6" >
+        D6
+      </button>
+        <input name="attr_d6pool" min="0" placeholder="0" type="number" />
+    </div>
+    <div class="d8rollvehicle2" >
+      <button name="d8roll" type="roll" value="/roll d8" >
+        D8
+      </button>
+        <input name="attr_d8pool" min="0" placeholder="0" type="number" />
+    </div>
+    <div class="d10rollvehicle2" >
+      <button name="d10roll" type="roll" value="/roll d10" >
+        D10
+      </button>
+        <input name="attr_d10pool" min="0" placeholder="0" type="number" />
+    </div>
+    <div class="d12rollvehicle2" >
+      <button name="d12roll" type="roll" value="/roll d12" >
+        D12
+      </button>
+        <input name="attr_d12pool" min="0" placeholder="0" type="number" />
+    </div>
+
+    <div class="poolbuttonsvehicle2" >
+      <button name="rollpool" type="roll" value="/roll {[[0 + @{d4pool}]]d4 + [[0 + @{d6pool}]]d6 + [[0 + @{d8pool}]]d8 + [[0 + @{d10pool}]]d10 + [[0 + @{d12pool}]]d12}k2" >
+        Roll Pool
+      </button>
+      <button name="act_clearpool" type="action" >
+        Clear Pool
+      </button>
+    </div>
+
+    <div class="distinctionsvehicle2" >
+      <h2>Distinctions</h2>
+    </div>
+
+      <div class="dis1vehicle2" >
+        <input class="description" name="attr_dis12" spellcheck="false" type="text" />
+      </div>
+      <div class="dis1vehiclesfx2">
+        <fieldset class="repeating_dis1sfx2">
+          <input class="sub_name" name="attr_dis1sfx_name2" placeholder="SFX Name" spellcheck="false" type="text" />
+          <textarea class="short" name="attr_dis1sfx_desc2" spellcheck="false" type="text" >SFX Description</textarea>
+        </fieldset>
+      </div>
+
+      <div class="dis2vehicle2" >
+        <input class="description" name="attr_dis22" spellcheck="false" type="text" />
+      </div>
+      <div class="dis2vehiclesfx2">
+        <fieldset class="repeating_dis2sfx2">
+          <input class="sub_name" name="attr_dis2sfx_name2" placeholder="SFX Name" spellcheck="false" type="text" />
+          <textarea class="short" name="attr_dis2sfx_desc2" spellcheck="false" type="text" >SFX Description</textarea>
+        </fieldset>
+      </div>
+
+      <div class="dis3vehicle2" >
+        <input class="description" name="attr_dis32" spellcheck="false" type="text" />
+      </div>
+      <div class="dis3vehiclesfx2">
+        <fieldset class="repeating_dis3sfx2">
+          <input class="sub_name" name="attr_dis3sfx_name2" placeholder="SFX Name" spellcheck="false" type="text" />
+          <textarea class="short" name="attr_dis3sfx_desc2" spellcheck="false" type="text" >SFX Description</textarea>
+        </fieldset>
+      </div>
+
+      <div class="distinctiondicevehicle2">
+        <button name="act_d4distinction" type="action" >
+          Add D4, +1PP
+        </button>
+        <button name="act_d8add" type="action" >
+          Add D8
+        </button>
+      </div>
+
+    <div class="attributesvehicle2" >
+      <h2>Attributes</h2>
+    </div>
+
+      <div class="engines2">
+        <strong>Engines</strong>
+          <select class="small" name="attr_engines2" >
+            <option value="d6">D6</option>
+            <option value="d8">D8</option>
+            <option value="d10">D10</option>
+          </select>
+      </div>
+
+      <div class="frames2">
+        <strong>Frames</strong>
+          <select class="small" name="attr_frames2" >
+            <option value="d6">D6</option>
+            <option value="d8">D8</option>
+            <option value="d10">D10</option>
+          </select>
+      </div>
+
+      <div class="systems2">
+        <strong>Systems</strong>
+          <select class="small" name="attr_systems2" >
+            <option value="d6">D6</option>
+            <option value="d8">D8</option>
+            <option value="d10">D10</option>
+          </select>
+      </div>
+
+    <div class="stressvehicle2">
+      <h2>Stress</h2>
+    </div>
+
+      <div class="enginesstress2">
+        <select class="small" name="attr_enginesstress2" >
+          <option value="0">0</option>
+          <option value="d4">D4</option>
+          <option value="d6">D6</option>
+          <option value="d8">D8</option>
+          <option value="d10">D10</option>
+          <option value="d12">D12</option>
+          <option value="Out">Out</option>
+        </select>
+      </div>
+
+      <div class="framesstress2">
+        <select class="small" name="attr_afraidstress2" >
+          <option value="0">0</option>
+          <option value="d4">D4</option>
+          <option value="d6">D6</option>
+          <option value="d8">D8</option>
+          <option value="d10">D10</option>
+          <option value="d12">D12</option>
+          <option value="Out">Out</option>
+        </select>
+      </div>
+
+      <div class="systemsstress2">
+        <select class="small" name="attr_systemsstress2" >
+          <option value="0">0</option>
+          <option value="d4">D4</option>
+          <option value="d6">D6</option>
+          <option value="d8">D8</option>
+          <option value="d10">D10</option>
+          <option value="d12">D12</option>
+          <option value="Out">Out</option>
+        </select>
+      </div>
+
+    <div class="traumavehicle2">
+      <h2>Trauma</h2>
+    </div>
+
+      <div class="enginestrauma2">
+        <select class="small" name="attr_enginestrauma2" >
+          <option value="0">0</option>
+          <option value="d4">D4</option>
+          <option value="d6">D6</option>
+          <option value="d8">D8</option>
+          <option value="d10">D10</option>
+          <option value="d12">D12</option>
+          <option value="Out">Destroyed</option>
+        </select>
+      </div>
+
+      <div class="framestrauma2">
+        <select class="small" name="attr_framestrauma2" >
+          <option value="0">0</option>
+          <option value="d4">D4</option>
+          <option value="d6">D6</option>
+          <option value="d8">D8</option>
+          <option value="d10">D10</option>
+          <option value="d12">D12</option>
+          <option value="Out">Destroyed</option>
+        </select>
+      </div>
+
+      <div class="systemstrauma2">
+        <select class="small" name="attr_systemstrauma2" >
+          <option value="0">0</option>
+          <option value="d4">D4</option>
+          <option value="d6">D6</option>
+          <option value="d8">D8</option>
+          <option value="d10">D10</option>
+          <option value="d12">D12</option>
+          <option value="Out">Destroyed</option>
+        </select>
+      </div>
+
+      <div class="attributesbuttonsvehicle2">
+        <button name="act_d4add" type="action" >
+          Add D4
+        </button>
+        <button name="act_d6add" type="action" >
+          Add D6
+        </button>
+        <button name="act_d8add" type="action" >
+          Add D8
+        </button>
+        <button name="act_d10add" type="action" >
+          Add D10
+        </button>
+      </div>
+
+  <div class="signatureassetsvehicle2">
+    <h2>Signature Assets</h2>
+  </div>
+
+    <div class="asset_names_descsvehicle2">
+      <fieldset class="repeating_assetvehicle2">
+        <input class="sub_name" name="attr_vehicleasset_name2" placeholder="Asset" spellcheck="false" type="text" />
+        <select class="small" name="attr_vehicleasset_rating2" >
+          <option value="d6">D6</option>
+          <option value="d8">D8</option>
+          <option value="d10">D10</option>
+        </select>
+        <input class="description" name="attr_vehicleasset_desc2" placeholder="Asset Description or SFX" spellcheck="false" type="text" />
+      </fieldset>
+    </div>
+</div>
+
+<div class="kaiju" >
+  <div class="idno" >
+    <h2>MMM ID #</h2>
+    <input class="sub_name" name="attr_idno" placeholder="e.g. 1" spellcheck="false" type="text" />
+  </div>
+
+  <div class="type" >
+    <h2>Type</h2>
+    <input class="sub_name" name="attr_type" placeholder='e.g. "Bunny"' spellcheck="false" type="text" />
+  </div>
+
+  <div class="kaijuscale" >
+    <h2>Scale</h2>
+    <select class="long" name="attr_kaiju_scale" >
+      <option value="Big">Big - D6</option>
+      <option value="Huge">Huge - D8</option>
+      <option value="Colossal">Colossal - D10</option>
+      <option value="Gargantuan">Gargantuan - D12</option>
+    </select>
+  </div>
+
+  <div class="dicepoolkaiju" >
+    <h2>Dice Pool</h2>
+  </div>
+
+    <div class="d4rollkaiju" >
+      <button name="d4roll" type="roll" value="/roll d4" >
+        D4
+      </button>
+        <input name="attr_d4pool" min="0" placeholder="0" type="number" />
+    </div>
+    <div class="d6rollkaiju" >
+      <button name="d6roll" type="roll" value="/roll d6" >
+        D6
+      </button>
+        <input name="attr_d6pool" min="0" placeholder="0" type="number" />
+    </div>
+    <div class="d8rollkaiju" >
+      <button name="d8roll" type="roll" value="/roll d8" >
+        D8
+      </button>
+        <input name="attr_d8pool" min="0" placeholder="0" type="number" />
+    </div>
+    <div class="d10rollkaiju" >
+      <button name="d10roll" type="roll" value="/roll d10" >
+        D10
+      </button>
+        <input name="attr_d10pool" min="0" placeholder="0" type="number" />
+    </div>
+    <div class="d12rollkaiju" >
+      <button name="d12roll" type="roll" value="/roll d12" >
+        D12
+      </button>
+        <input name="attr_d12pool" min="0" placeholder="0" type="number" />
+    </div>
+
+    <div class="poolbuttonskaiju" >
+      <button name="rollpool" type="roll" value="/roll {[[0 + @{d4pool}]]d4 + [[0 + @{d6pool}]]d6 + [[0 + @{d8pool}]]d8 + [[0 + @{d10pool}]]d10 + [[0 + @{d12pool}]]d12}k2" >
+        Roll Pool
+      </button>
+      <button name="act_clearpool" type="action" >
+        Clear Pool
+      </button>
+    </div>
+
+  <div class="distinctionskaiju" >
+    <h2>Distinctions</h2>
+  </div>
+
+    <div class="dis1kaiju" >
+      <input class="description" name="attr_dis1k" spellcheck="false" type="text" />
+    </div>
+    <div class="dis1kaijusfx">
+      <fieldset class="repeating_dis1sfxk">
+        <input class="sub_name" name="attr_dis1sfx_namek" placeholder="SFX Name" spellcheck="false" type="text" />
+        <textarea class="short" name="attr_dis1sfx_desck" spellcheck="false" type="text" >SFX Description</textarea>
+      </fieldset>
+    </div>
+
+    <div class="dis2kaiju" >
+      <input class="description" name="attr_dis2k" spellcheck="false" type="text" />
+    </div>
+    <div class="dis2kaijusfx">
+      <fieldset class="repeating_dis2sfxk">
+        <input class="sub_name" name="attr_dis2sfx_namek" placeholder="SFX Name" spellcheck="false" type="text" />
+        <textarea class="short" name="attr_dis2sfx_desck" spellcheck="false" type="text" >SFX Description</textarea>
+      </fieldset>
+    </div>
+
+    <div class="dis3kaiju" >
+      <input class="description" name="attr_dis3k" spellcheck="false" type="text" />
+    </div>
+    <div class="dis3kaijusfx">
+      <fieldset class="repeating_dis3sfxk">
+        <input class="sub_name" name="attr_dis3sfx_namek" placeholder="SFX Name" spellcheck="false" type="text" />
+        <textarea class="short" name="attr_dis3sfx_desck" spellcheck="false" type="text" >SFX Description</textarea>
+      </fieldset>
+    </div>
+
+    <div class="distinctiond4kaiju">
+      <button name="act_d4distinction" type="action" >
+        Add D4, +1PP
+      </button>
+    </div>
+    <div class="distinctiond8kaiju">
+      <button name="act_d8add" type="action" >
+        Add D8
+      </button>
+    </div>
+
+  <div class="affiliationskaiju" >
+    <h2>Affiliations</h2>
+  </div>
+
+    <div class="solo">
+      <strong>Solo</strong>
+        <select class="small" name="attr_solo" >
+          <option value="d4">D4</option>
+          <option value="d6">D6</option>
+          <option value="d8">D8</option>
+          <option value="d10">D10</option>
+          <option value="d12">D12</option>
+        </select>
+    </div>
+
+    <div class="pair">
+      <strong>Pair</strong>
+        <select class="small" name="attr_pair" >
+          <option value="d4">D4</option>
+          <option value="d6">D6</option>
+          <option value="d8">D8</option>
+          <option value="d10">D10</option>
+          <option value="d12">D12</option>
+        </select>
+    </div>
+
+    <div class="pack">
+      <strong>Pack</strong>
+        <select class="small" name="attr_pack" >
+          <option value="d4">D4</option>
+          <option value="d6">D6</option>
+          <option value="d8">D8</option>
+          <option value="d10">D10</option>
+          <option value="d12">D12</option>
+        </select>
+    </div>
+
+    <div class="affiliationdice">
+      <button name="act_d4add" type="action" >
+        Add D4
+      </button>
+      <button name="act_d6add" type="action" >
+        Add D6
+      </button>
+      <button name="act_d8add" type="action" >
+        Add D8
+      </button>
+      <button name="act_d10add" type="action" >
+        Add D10
+      </button>
+      <button name="act_d12add" type="action" >
+        Add D12
+      </button>
+    </div>
+
+  <div class="stresskaiju">
+    <h2>Stress</h2>
+  </div>
+
+    <div class="afraidstresskaiju">
+      <strong>Afraid</strong>
+      <select class="small" name="attr_afraidstresskaiju" >
+        <option value="0">0</option>
+        <option value="d4">D4</option>
+        <option value="d6">D6</option>
+        <option value="d8">D8</option>
+        <option value="d10">D10</option>
+        <option value="d12">D12</option>
+        <option value="Out">Out</option>
+      </select>
+    </div>
+
+    <div class="exhaustedstresskaiju">
+      <strong>Exhausted</strong>
+      <select class="small" name="attr_exhaustedstresskaiju" >
+        <option value="0">0</option>
+        <option value="d4">D4</option>
+        <option value="d6">D6</option>
+        <option value="d8">D8</option>
+        <option value="d10">D10</option>
+        <option value="d12">D12</option>
+        <option value="Out">Out</option>
+      </select>
+    </div>
+
+    <div class="injuredstresskaiju">
+      <strong>Injured</strong>
+      <select class="small" name="attr_injuredstresskaiju" >
+        <option value="0">0</option>
+        <option value="d4">D4</option>
+        <option value="d6">D6</option>
+        <option value="d8">D8</option>
+        <option value="d10">D10</option>
+        <option value="d12">D12</option>
+        <option value="Out">Out</option>
+      </select>
+    </div>
+
+  <div class="skillskaiju">
+    <h2>Skills</h2>
+  </div>
+
+    <div class="skillratingkaiju">
+      <fieldset class="repeating_skillskaiju1">
+
+        <select class="small" name="attr_skillkaiju1">
+          <option>Choose...</option>
+          <option>Build</option>
+          <option>Fight</option>
+          <option>Fix</option>
+          <option>Focus</option>
+          <option>Influence</option>
+          <option>Know</option>
+          <option>Move</option>
+          <option>Notice</option>
+          <option>Operate</option>
+          <option>Pilot</option>
+          <option>Shoot</option>
+          <option>Sneak</option>
+          <option>Survive</option>
+          <option>Treat</option>
+          <option>Trick</option>
+        </select>
+
+        <select class="small" name="attr_skillratingkaiju1">
+          <option value="d4">D4</option>
+          <option value="d6">D6</option>
+          <option value="d8">D8</option>
+          <option value="d10">D10</option>
+          <option value="d10">D12</option>
+        </select>
+
+        <input class="sub_name" name="attr_speckaiju1" placeholder="Specialties" spellcheck="false" type="text" />
+      </fieldset>
+    </div>
+
+    <div class="skilldicekaiju">
+      <button name="act_d4add" type="action" >
+        Add D4
+      </button>
+      <button name="act_d6add" type="action" >
+        Add D6
+      </button>
+      <button name="act_d8add" type="action" >
+        Add D8
+      </button>
+      <button name="act_d10add" type="action" >
+        Add D10
+      </button>
+      <button name="act_d12add" type="action" >
+        Add D12
+      </button>
+    </div>
+
+  <div class="powers" >
+    <h2>Powers</h2>
+  </div>
+
+    <div class="powerrating">
+      <fieldset class="repeating_power1">
+        <select class="long" name="attr_power_rating1">
+          <option value="d6">D6 - Minor</option>
+          <option value="d8">D8 - Enhanced</option>
+          <option value="d10">D10 - Super</option>
+          <option value="d10">D12 - Godlike</option>
+        </select>
+        <input class="sub_name" name="attr_power_name1" placeholder="Power Name" spellcheck="false" type="text" />
+      </fieldset>
+    </div>
+
+    <div class="powerdice">
+      <button name="act_d6add" type="action" >
+        Add D6
+      </button>
+      <button name="act_d8add" type="action" >
+        Add D8
+      </button>
+      <button name="act_d10add" type="action" >
+        Add D10
+      </button>
+      <button name="act_d12add" type="action" >
+        Add D12
+      </button>
+    </div>
+</div>
+
+<script type="text/worker">
+
+// makes the sheet tab buttons at the top of the sheet work
+  const buttonlist = [ "stats", "history", "vehicle", "secondary_vehicle", "kaiju" ];
+  buttonlist.forEach(button => {
+    on(`clicked:${button}`, function() {
+      setAttrs({
+        sheetTab: button
+      });
+    });
+  });
+
+
+// make the "Clear Pool" buttons work
+  on("clicked:clearpool", function() {
+    getAttrs(["d4pool", "d6pool", "d8pool", "d10pool", "d12pool"], function(values) {
+      setAttrs({
+        d4pool: 0,
+        d6pool: 0,
+        d8pool: 0,
+        d10pool: 0,
+        d12pool: 0
+      });
+    });
+  });
+
+// makes the "d4 Distinction" button work
+  on("clicked:d4distinction", function() {
+    getAttrs(["d4pool", "pp"], function(values) {
+      let d4pool = parseInt(values.d4pool,10)||0;
+      let pp = parseInt(values.pp,10)||0;
+      ++d4pool;
+      ++pp;
+      setAttrs({
+        d4pool: d4pool,
+        pp: pp
+      });
+    });
+  });
+
+// make the various "Add XdX" buttons work
+  on("clicked:d4add", function() {
+    getAttrs(["d4pool"], function(values) {
+      let d4pool = parseInt(values.d4pool,10)||0;
+      ++d4pool;
+      setAttrs({
+        d4pool: d4pool,
+      });
+    });
+  });
+
+  on("clicked:d6add", function() {
+    getAttrs(["d6pool"], function(values) {
+      let d6pool = parseInt(values.d6pool,10)||0;
+      ++d6pool;
+      setAttrs({
+        d6pool: d6pool,
+      });
+    });
+  });
+
+  on("clicked:d8add", function() {
+    getAttrs(["d8pool"], function(values) {
+      let d8pool = parseInt(values.d8pool,10)||0;
+      ++d8pool;
+      setAttrs({
+        d8pool: d8pool,
+      });
+    });
+  });
+
+  on("clicked:d10add", function() {
+    getAttrs(["d10pool"], function(values) {
+      let d10pool = parseInt(values.d10pool,10)||0;
+      ++d10pool;
+      setAttrs({
+        d10pool: d10pool,
+      });
+    });
+  });
+
+  on("clicked:d12add", function() {
+    getAttrs(["d12pool"], function(values) {
+      let d12pool = parseInt(values.d12pool,10)||0;
+      ++d12pool;
+      setAttrs({
+        d12pool: d12pool,
+      });
+    });
+  });
+
+// make the "Push", "Opportunity Push" buttons work
+  on("clicked:push", function() {
+    getAttrs(["d6pool", "pp"], function(values) {
+      let d6pool = parseInt(values.d6pool,10)||0;
+      let pp = parseInt(values.pp,10)||0;
+      ++d6pool;
+      --pp;
+      setAttrs({
+        d6pool: d6pool,
+        pp: pp
+      });
+    });
+  });
+
+  on("clicked:opppush", function() {
+    getAttrs(["d8pool", "pp"], function(values) {
+      let d8pool = parseInt(values.d8pool,10)||0;
+      let pp = parseInt(values.pp,10)||0;
+      ++d8pool;
+      --pp;
+      setAttrs({
+        d8pool: d8pool,
+        pp: pp
+      });
+    });
+  });
+
+// makes the "Create Asset" button work
+
+  on("clicked:createasset", function() {
+    getAttrs(["pp"], function(values) {
+      let pp = parseInt(values.pp,10)||0;
+      --pp;
+      setAttrs({
+        pp: pp,
+      });
+    });
+  });
+</script>
