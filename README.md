@@ -9,3 +9,6 @@ Custom Cortex Prime TTRPG character files for use on Roll20.net
 - Kaijupocalypse Academy (kpa-roll20-cf)
   - HTML/Javascript
   - CSS
+- Palace Intrigue (pi-roll20-cf)
+  - HTML/Javascript
+  - CSS
