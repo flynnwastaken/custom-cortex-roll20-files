@@ -1,0 +1,268 @@
+/*-------------------------------------------------*\
+	# SHEET STRUCTURE
+\*-------------------------------------------------*/
+/* show the selected tab and structuring of grids */
+.sheet-stats {
+	display: grid;
+	grid-template-columns: 95px 105px 105px 105px 105px 105px 105px 105px;
+	grid-template-rows: 1fr 1fr 1fr fit-content() 1fr fit-content() 1fr
+		1fr fit-content() 1fr 1fr fit-content() 1fr fit-content() 1fr fit-content()
+		1fr 1fr 1fr;
+	justify-content: center;
+	background-color: black;
+	background-size: 840px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* laying out the grid elements on the STATS tab */
+
+.sheet-name { grid-area: 1/1/2/2; }
+
+.sheet-name_query { grid-area: 1/2/2/4; }
+
+
+.sheet-plotpoints { grid-area: 1/7/2/8; }
+
+.sheet-ppcounter { grid-area: 1/8/2/9; }
+
+
+.sheet-dicepool { grid-area: 2/1/3/2; }
+
+.sheet-d4roll { grid-area: 2/2/4/3; }
+
+.sheet-d6roll { grid-area: 2/3/4/4; }
+
+.sheet-d8roll { grid-area: 2/4/4/5; }
+
+.sheet-d10roll { grid-area: 2/5/4/6; }
+
+.sheet-d12roll { grid-area: 2/6/4/7; }
+
+.sheet-poolbuttons { grid-area: 2/7/4/8; }
+
+
+.sheet-distinctions { grid-area: 4/1/5/2; }
+
+.sheet-dis1 { grid-area: 4/2/5/7; }
+
+.sheet-dis1sfx { grid-area: 5/2/6/9; }
+
+.sheet-dis2 { grid-area: 6/2/7/7; }
+
+.sheet-dis2sfx { grid-area: 7/2/8/9; }
+
+.sheet-dis3 { grid-area: 8/2/9/7}
+
+.sheet-d4distinction { grid-area: 8/7/9/8; }
+
+.sheet-d8distinction { grid-area: 8/8/9/9; }
+
+.sheet-dis3sfx { grid-area: 9/2/10/9; }
+
+
+.sheet-values { grid-area: 10/1/11/3; }
+
+.sheet-family {	grid-area: 10/3/11/4; }
+
+.sheet-history { grid-area: 10/4/11/5; }
+
+.sheet-indulgence { grid-area: 10/5/11/6; }
+
+.sheet-reciprocity { grid-area: 10/6/11/7; }
+
+.sheet-power { grid-area: 10/7/11/8; }
+
+.sheet-valuedice { grid-area: 11/4/12/8; }
+
+
+.sheet-relationships { grid-area: 12/1/13/2; }
+
+.sheet-relationship_name_state { grid-area: 12/2/13/9; }
+
+.sheet-relationshipbuttons { grid-area: 13/3/14/8; }
+
+
+.sheet-resources { grid-area: 14/1/15/2; }
+
+.sheet-resource_name_tags { grid-area: 14/2/15/9; }
+
+.sheet-resourcebuttons { grid-area: 15/4/16/9; }
+
+
+.sheet-assets { grid-area: 16/1/17/3; }
+
+.sheet-asset_name { grid-area: 16/3/17/9; }
+
+.sheet-assetbuttons { grid-area: 17/2/17/9; }
+
+
+.sheet-poolbuttons_b { grid-area: 18/1/19/2; }
+
+.sheet-d4roll_b { grid-area: 18/3/19/4; }
+
+.sheet-d6roll_b { grid-area: 18/4/19/5; }
+
+.sheet-d8roll_b { grid-area: 18/5/19/6; }
+
+.sheet-d10roll_b { grid-area: 18/6/19/7; }
+
+.sheet-d12roll_b { grid-area: 18/7/19/8; }
+
+
+.sheet-bio { grid-area: 19/2/20/9; }
+
+
+/*-------------------------------------------------*\
+	# GENERAL
+\*-------------------------------------------------*/
+
+/* ------- Inputs ------- */
+
+input[type="number"] {
+	margin: 5px;
+	height: 40px;
+	width: 40px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+input.sheet-name {
+  margin: 8px;
+  width: 18em;
+	text-transform: uppercase;
+  font-family: Candal;
+	font-weight: bolder;
+  font-size: 20px;
+	background-color: #FFCD00;
+	color: black;
+}
+
+input.sheet-sub_name {
+  margin-left: 2px;
+	margin-right: 2px;
+  width: 10em;
+	text-transform: uppercase;
+  font-family: Contrail One;
+  font-size: 18px;
+	background-color: #FFCD00;
+	color: black;
+}
+
+input.sheet-small {
+	margin-top: 8px;
+	margin-left: 2px;
+	margin-right: 2px;
+  width: 5em;
+	text-transform: uppercase;
+  font-family: Contrail One;
+  font-size: 18px;
+	background-color: #FFCD00;
+	color: black;
+}
+
+input.sheet-description {
+	margin: 4px;
+	width: 31em;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: #FFCD00;
+	color: black;
+}
+
+/* ------- Textareas ------- */
+
+textarea {
+	margin-left: 5px;
+	width: 340px;
+	height: 300px;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: #FFCD00;
+	color: black;
+}
+
+textarea.sheet-tall_n_wide {
+	margin-left: 5px;
+	width: 630px;
+	height: 655px;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: #FFCD00;
+	color: black;
+}
+
+textarea.sheet-short {
+	margin: 4px;
+	margin-top: 7px;
+	width: 35em;
+	height: 16px;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: #FFCD00;
+	color: black;
+}
+
+/* ------- Selects ------- */
+
+select.sheet-small {
+	margin: 4px;
+	width: 90px;
+	background-color: #FFCD00;
+	font-weight: bold;
+}
+
+select.sheet-medium {
+	margin: 4px;
+	width: 120px;
+	background-color: #FFCD00;
+	font-weight: bold;
+}
+
+select.sheet-long {
+	width: 150px;
+	background-color: #FFCD00;
+	font-weight: bold;
+}
+
+select.sheet-xl {
+	width: 175px;
+	background-color: #FFCD00;
+	font-weight: bold;
+}
+
+
+/* ------- Text ------- */
+
+h1 {
+	font-family: Candal;
+	text-transform: uppercase;
+	font-size: 25px;
+	color: white;
+}
+
+p, strong, label {
+	font-family: Candal;
+	color: white;
+}
+
+h2 {
+	margin: 2px;
+	font-size: 16px;
+	font-family: Contrail One;
+	text-transform: uppercase;
+	color: white;
+}
+
+/* ------- Buttons ------- */
+
+button {
+	margin: 6px;
+	padding: 5px 7px;
+	text-align: center;
+	font-family: Candal;
+	font-size: 13px;
+	text-transform: uppercase;
+	background-color: #FFCD00;
+	color: black;
+}
