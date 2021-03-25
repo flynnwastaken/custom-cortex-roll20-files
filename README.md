@@ -7,8 +7,10 @@ Custom Cortex Prime TTRPG character files for use on Roll20.net
 
 ## hacks
 - Kaijupocalypse Academy (kpa-roll20-cf)
+  - Rules: https://docs.google.com/document/d/1isjhBFGNDG8SemRGXtT_7rogi8G_RKvvJINF0erPvfQ/edit?usp=sharing
   - HTML/Javascript
   - CSS
 - Palace Intrigue (pi-roll20-cf)
+  - Rules: https://docs.google.com/document/d/1x-eEH6KWn_3c75JWhnHxu7Znh7kPMs0HaigEf8NLNZo/edit?usp=sharing
   - HTML/Javascript
   - CSS
